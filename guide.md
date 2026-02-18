@@ -30,22 +30,22 @@ Note: It is important in this step to keep in mind the design rules and watch ou
 ## Step Three: Initial Static Structural Simulation
 In order to run the topology optimization program, we first need to run a static structural simulation on our part using the expected load cases.
 
-# First, open Ansys Workbench and create a static structural simulation
+### First, open Ansys Workbench and create a static structural simulation
 
-# Define the material of the part
+### Define the material of the part
 Here we come to a bit of an issue. The parts that we are designing to go on the car will be made of aluminum 7075T6, however when I designed these parts last year, I vaguely remember being advised to run the optimization program using structural steel instead of aluminum 7075. I believe it was because the optimization method we are using doesn't work very well with aluminum, but I cannot confirm this and haven't actually compared the results using each material. It may be true, or it may be some urban legend passed down through generations - if someone wants to run the same simulation in parallel with aluminum and steel to test that out, that would be really cool! For the guide i'm just going to say to use steel because I did it last year and it worked well enough. 
 
 Note: You may come to find that the material is already assigned as structural steel by default, in which case you don't need to do anything!
 
-# Add loads and constraints
+### Add loads and constraints
 For the sake of this guide, i'm just adding generalized forces. When you do this project for real, you should be provided with loads by Sam and Viktor. 
 
 Note: Make sure to apply a different bearing load for each hole, or the force you specify will be distributed over the multiple holes selected
 Note 2: Hold Ctrl to select multiple faces at a time
 
-# Create your mesh
+### Create your mesh
 
-# Define your analysis Outputs
+### Define your analysis Outputs
 
 
 
