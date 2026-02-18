@@ -28,7 +28,24 @@ The ansys structural optimization method that we will be using (Density Based To
 Note: It is important in this step to keep in mind the design rules and watch out for interferences. Make sure your plate doesn't interfere with any rear wing elements and isn't so tall as to become illigal via the rules. See [T 7.7](https://www.bing.com/ck/a?!&&p=31d652aacf2c253635ddbf2cef5e78a2e902b9649fdfdee165f7b8406cfcdb3bJmltdHM9MTc3MTM3MjgwMA&ptn=3&ver=2&hsh=4&fclid=10275a2f-76f2-6c6c-0dac-4d2b77e96d8c&psq=fsae+2026+ev+rulebook&u=a1aHR0cHM6Ly93d3cuZnNhZW9ubGluZS5jb20vY2Rzd2ViL2dlbi9Eb3dubG9hZERvY3VtZW50LmFzcHg_RG9jdW1lbnRJRD0yNzhmZDRkNy1hYTI3LTRlMzMtYmM0YS0wOTAxNDhlNjYyYTA) on page 71 of the rulebook for aerodynamic devices, specifically the height limit. <br><br>
 
 ## Step Three: Initial Static Structural Simulation
+In order to run the topology optimization program, we first need to run a static structural simulation on our part using the expected load cases.
 
+# First, open Ansys Workbench and create a static structural simulation
+
+# Define the material of the part
+Here we come to a bit of an issue. The parts that we are designing to go on the car will be made of aluminum 7075T6, however when I designed these parts last year, I vaguely remember being advised to run the optimization program using structural steel instead of aluminum 7075. I believe it was because the optimization method we are using doesn't work very well with aluminum, but I cannot confirm this and haven't actually compared the results using each material. It may be true, or it may be some urban legend passed down through generations - if someone wants to run the same simulation in parallel with aluminum and steel to test that out, that would be really cool! For the guide i'm just going to say to use steel because I did it last year and it worked well enough. 
+
+Note: You may come to find that the material is already assigned as structural steel by default, in which case you don't need to do anything!
+
+# Add loads and constraints
+For the sake of this guide, i'm just adding generalized forces. When you do this project for real, you should be provided with loads by Sam and Viktor. 
+
+Note: Make sure to apply a different bearing load for each hole, or the force you specify will be distributed over the multiple holes selected
+Note 2: Hold Ctrl to select multiple faces at a time
+
+# Create your mesh
+
+# Define your analysis Outputs
 
 
 
