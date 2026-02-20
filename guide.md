@@ -99,12 +99,12 @@ To setup the topop sim, click setup on the structural optimization block and sel
 
 <figure>
   <img src="Exclusion region via geometry selection.png" alt="image" width="500">
-  <figcaption>Select the exclusion region using geometry selection</figcaption>
+  <figcaption>Select the exclusion region using geometry selection.</figcaption>
 </figure><br><br>
 
 <figure>
   <img src="properly selected exclusion region.png" alt="image" width="500">
-  <figcaption>This is what your selection should look like</figcaption>
+  <figcaption>This is what your selection should look like.</figcaption>
 </figure><br><br>
 
 At this point, you can run your first iteration of the optimization.
