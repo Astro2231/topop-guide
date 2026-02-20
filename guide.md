@@ -38,7 +38,7 @@ https://github.com/user-attachments/assets/8acda7a6-9830-4eab-b93f-c006cb2a2ac7 
 ### Define the material of the part
 Here we come to a bit of an issue. The parts that we are designing to go on the car will be made of aluminum 7075T6, however when I designed these parts last year, I vaguely remember being advised to run the optimization program using structural steel instead of aluminum 7075. I believe it was because the optimization method we are using doesn't work very well with aluminum, but I cannot confirm this and haven't actually compared the results using each material. It may be true, or it may be some urban legend passed down through generations - if someone wants to run the same simulation in parallel with aluminum and steel to test that out, that would be really cool! For the guide i'm just going to say to use steel because I did it last year and it worked well enough. 
 
-https://github.com/user-attachments/assets/ce0d8cbe-8616-4e0c-a807-593c76817163 <!-- Assign Material -->
+<https://github.com/user-attachments/assets/ce0d8cbe-8616-4e0c-a807-593c76817163> <!-- Assign Material -->
 
 
 Note: You may come to find that the material is already assigned as structural steel by default, in which case you don't need to do anything!
@@ -46,9 +46,9 @@ Note: You may come to find that the material is already assigned as structural s
 ### Add loads and constraints
 For the sake of this guide, i'm just adding generalized forces. When you do this project for real, you should be provided with loads by Sam and Viktor. 
 
-https://github.com/user-attachments/assets/d20604d3-de06-415a-a8b5-dc6ea270ce3c <!-- Apply bearing load -->
+<https://github.com/user-attachments/assets/d20604d3-de06-415a-a8b5-dc6ea270ce3c> <!-- Apply bearing load -->
 
-https://github.com/user-attachments/assets/2394b12c-9fed-406f-825e-23ae953c89e7 <!-- Apply Cylindrical Support -->
+<https://github.com/user-attachments/assets/2394b12c-9fed-406f-825e-23ae953c89e7> <!-- Apply Cylindrical Support -->
 
 
 Note: Make sure to apply a different bearing load for each hole, or the force you specify will be distributed over the multiple holes selected
@@ -59,12 +59,12 @@ The final step before you are finished with the static structural setup is to cr
 
 To select a meshing methodology, right click the "mesh" section on the left and insert method. I usually default to a tetrehedral mesh, as it seems to deal with curved surfaces and holes the best, however I once again would be happily be proven wrong if someone wants to look into optimal meshing methods for this type of FEA. 
 
-https://github.com/user-attachments/assets/9c53bc75-6b42-4e3d-a745-f45413030bcf <!-- Meshing Method Selection -->
+<https://github.com/user-attachments/assets/9c53bc75-6b42-4e3d-a745-f45413030bcf> <!-- Meshing Method Selection -->
 
 
 To select a mesh cell size, again right click the "mesh" section and insert sizing. A good rule of thumb is to make sure that your mesh is fine enough that areas that may see significantly different stresses near each other (eg. a thin beam in bending or corners with small radii) have enough cells that those stresses won't be averaged out across one big cell and potentially skew your results. The downside to a finer mesh is longer simulation times, as the computer has to solve for more cell conditions. A 5mm mesh should be good enough for almost all of our useceses and solves pretty quickly on small parts.
 
-https://github.com/user-attachments/assets/6cfab391-1a15-42cd-8dd7-52b6b4f2d8ff <!-- Meshing Size Selection -->
+<https://github.com/user-attachments/assets/6cfab391-1a15-42cd-8dd7-52b6b4f2d8ff> <!-- Meshing Size Selection -->
 
 
 
