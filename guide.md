@@ -13,11 +13,11 @@ span from the two attachment points on the wing to the two brackets on the roll 
 </figure><br><br>
 
 ## Step Two: Defining Your Maximum Material Area
-The ansys structural optimization method that we will be using (Density Based Topology Optimization) works by determining the lowest possible material density in each cell of the part we are optimizing, to meet a certain load case and set of criteria (in very oversimplified terms). This means we will first need to give the software a large solid part to work with, as this optimization method can optimize material that alread exists in the part. In the case of most 2d plates like this, the best way to define the starting material is to create the outline of what you want your final plate to look like. I encourage you to briefely skim through the ansys documentation [here](https://ansyshelp.ansys.com/public/account/secured?returnurl=/Views/Secured/corp/v251/en/mech_struct_opt/ds_topo_opt_limitations.html) to learn a bit more about how this methodology works.<br><br>
+The ansys structural optimization method that we will be using (Density Based Topology Optimization) works by determining the lowest possible material density in each cell of the part we are optimizing, to meet a certain load case and set of criteria (in very oversimplified terms). This means we will first need to give the software a large solid part to work with, as this optimization method can only remove material that already exists in the part. In the case of most 2d plates like this, the best way to define the starting material is to create the outline of what you want your final plate to look like. I encourage you to briefely skim through the ansys documentation [here](https://ansyshelp.ansys.com/public/account/secured?returnurl=/Views/Secured/corp/v251/en/mech_struct_opt/ds_topo_opt_limitations.html) to learn a bit more about how this methodology works.<br><br>
 
 <figure> 
   <img src="example blank wing plate drawn.png" alt="image" width="500">
-  <figcaption>Example of a plate outline (watch out interferences and the height limit!)</figcaption>
+  <figcaption>Example of a plate outline (watch out for any interferences and the height limit!)</figcaption>
 </figure><br><br>
 <figure>
   <img src="rw mount outline part.png" alt="image" width="500"
