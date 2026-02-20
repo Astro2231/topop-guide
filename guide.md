@@ -116,7 +116,7 @@ When your simulation finishes running, you might be left with a result that look
   <figcaption>These results are garbage and lowkey tell us nothing useful. However, we can fix that!</figcaption>
 </figure><br><br>
 
-Through some experimentation I figured out that by adjusting the parameter "percent [mass] to retain," the results could be tuned to be much more useful for our design. I found the best results around 20%, however I would encourage you to experiment with values around that for your own mount designs. 
+Through some experimentation I figured out that by adjusting the parameter "percent [mass] to retain," the results could be tuned to be much more useful for our design. I found the best results around 20%, however I would encourage you to experiment with values around that for your own mount designs. You can find this parameter in the "response constraint" menue. 
 
 <figure>
   <img src="Good Results.png" alt="image" width="500">
@@ -130,8 +130,22 @@ There are other ways that we can fine tune our results. The optimization method 
 </figure><br><br>
 
 
-## Step Five: Model Part
+## Step Five: Model Your Part
+Once you are happy with the results of your simulation results, you need to use them to model your part. The best way that I have found is to take a screenshot of the simulation results and insert them as an image to solidworks. You can then trace over the approximate shapes that you want and be left with an approximately solid part. 
 
+<figure>
+  <img src="Screenshot Approximation.png" alt="image" width="500">
+  <figcaption>This is a reference from the design of the fb25 rear wing mounts. As you can see, the initial topology was used as an itial approximation before iterative changes were made to improve the strength and efficiency of the part. Topop is a good starting point, but huge gains can be made from good design.</figcaption>
+</figure><br><br>
+
+At this point, the last step is to simply iterate on your plate designs until you find something you are happy with or start seeing diminishing returns. The fb25 plates went through many versions of relatively different pocketing approaches using the FEA outline, before eventually settling into the final design. It is essential to validate your design work by running normal static structural simulations on your lightened parts versions, and comparing the performance between each. 
+
+<figure>
+  <img src="version control.png" alt="image" width="500">
+  <figcaption>*Final note- do NOT use onshape for this, the team standard is solidworks!!!</figcaption>
+</figure><br><br>
+
+Good luck!
 
 
 <!-- "S:\CAR\SP\Formula\Car 25 Vehicle (EV)\Car 25 Vehicle CAD\Aerodynamics\RW\Swan Neck\pald testing\Iteration 1\swan-neck-fea.wbpj" 
