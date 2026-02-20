@@ -84,6 +84,54 @@ Once the simulation has run, go back into workbench and make sure that all the c
   <img src="Static Structural Finished.png" alt="image" width="800">
 </figure>
 
+## Step Four: Run Structural Optimization (aka topology optimization) Simulation
+At this point, we are now finished with our static structural simulation and there is enough upstream data for the structural optimization sim to use for its topop. To set up the structural optimization sim, we will follow similar steps to the ones we used for our static sim. 
+
+### Connect the structural optimization block to the static structural simulation
+To configure the optimization sim to use the data from the first simulation, we need to go into ansys workbench and drag a structural optimization sim into our project. Make sure to drag it directly onto the "solution" box of the static structural sim, or else the rest of the sections will not connect properly. 
+
+<https://github.com/user-attachments/assets/cd4e9391-a0ac-40c2-9701-9c2f3573ff19>
+<!-- Insert structural Optimization -->
+
+
+### Run the Topology Optimization Sim
+To setup the topop sim, click setup on the structural optimization block and select edit, just as we did for the original static structural. Most of the default settings will be good for us, however we need to set up exclusion regions that we don't want material to be removed from. To do this, go into the optimization region menue and change the exclusion region to be defined by geometry selection. We want to select the entire outline of our part, as well as the inside edges of any holes. 
+
+<figure>
+  <img src="Exclusion region via geometry selection.png" alt="image" width="500">
+  <figcaption>Select the exclusion region using geometry selection</figcaption>
+</figure><br><br>
+
+<figure>
+  <img src="properly selected exclusion region.png" alt="image" width="500">
+  <figcaption>This is what your selection should look like</figcaption>
+</figure><br><br>
+
+At this point, you can run your first iteration of the optimization.
+
+### Analyze and Tune Results 
+When your simulation finishes running, you might be left with a result that looks something like this.
+<figure>
+  <img src="Garbage Results.png" alt="image" width="500">
+  <figcaption>These results are garbage and lowkey tell us nothing useful. However, we can fix that!</figcaption>
+</figure><br><br>
+
+Through some experimentation I figured out that by adjusting the parameter "percent [mass] to retain," the results could be tuned to be much more useful for our design. I found the best results around 20%, however I would encourage you to experiment with values around that for your own mount designs. 
+
+<figure>
+  <img src="Good Results.png" alt="image" width="500">
+  <figcaption>These results tell us much more efficiently how to reduce the material of the part while retaining strength</figcaption>
+</figure><br><br>
+
+There are other ways that we can fine tune our results. The optimization method we used gives results based on material density, so we can effectively increase/decrease the amount of material that is removed by changing the minimum density threshold. To do this, select topology density and change the "retained threshold value" between 0.01 (most material) and 0.99 (least material). You can ignore the other values such as mass and volume, because we only use the results of this simulation as a guide for the actual part design. 
+
+<figure>
+  <img src="Retained Threshold.png" alt="image" width="500">
+</figure><br><br>
+
+
+## Step Five: Model Part
+
 
 
 <!-- "S:\CAR\SP\Formula\Car 25 Vehicle (EV)\Car 25 Vehicle CAD\Aerodynamics\RW\Swan Neck\pald testing\Iteration 1\swan-neck-fea.wbpj" 
