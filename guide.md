@@ -106,6 +106,8 @@ To setup the topop sim, click setup on the structural optimization block and sel
   <figcaption>This is what your selection should look like.</figcaption>
 </figure><br><br>
 
+Note: Make sure to select the inside of each hole, or else the simulation will delete the holes as well. 
+
 At this point, you can run your first iteration of the optimization.
 
 ### Analyze and Tune Results 
